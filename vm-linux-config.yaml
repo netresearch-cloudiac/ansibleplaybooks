@@ -9,4 +9,8 @@
     debug: msg="{{ ansible_distribution_version}}"
   - name: Distribution major version
     debug: msg="{{ ansible_distribution_major_version }}"
+  - name: set timezone AEST
+    timezone:
+      name: Australia/Melbourne
   - local_action: copy content= dest=file
+  
